@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm sinh viên</title>
+</head>
+<body>
+<h1>Thêm sinh viên</h1>
+
+<form th:action="@{/student/create}" th:object="${student}" method="post">
+    Tên: <input type="text" th:field="*{name}"><br>
+    Điểm lý thuyết: <input type="number" th:field="*{theoryTestScores}"><br>
+    Điểm thực hành: <input type="number" th:field="*{practiceTestScores}"><br>
+    Đánh giá: <input type="text" th:field="*{evaluate}"><br>
+    <button type="submit">Lưu</button>
+</form>
+
+<a th:href="@{/student}">Quay lại danh sách</a>
+</body>
+</html>

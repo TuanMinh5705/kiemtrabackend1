@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết sinh viên</title>
+</head>
+<body>
+<h1>Chi tiết sinh viên</h1>
+
+<p><b>ID:</b> <span th:text="${student.id}"></span></p>
+<p><b>Tên:</b> <span th:text="${student.name}"></span></p>
+<p><b>Lý thuyết:</b> <span th:text="${student.theoryTestScores}"></span></p>
+<p><b>Thực hành:</b> <span th:text="${student.practiceTestScores}"></span></p>
+<p><b>Đánh giá:</b> <span th:text="${student.evaluate}"></span></p>
+<p><b>Lớp:</b> <span th:text="${student.school.schoolName}"></span></p>
+
+<a th:href="@{/student}">Quay lại danh sách</a>
+</body>
+</html>

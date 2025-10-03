@@ -31,11 +31,9 @@
         <td th:text="${student.evaluate}"></td>
         <td th:text="${student.school.schoolName}"></td>
         <td>
-            <!-- Xem chi tiết -->
-            <a th:href="@{/student/{id}(id=${student.id})}">Xem</a> |
+            <a th:href="@{/student/edit/{id}(id=${student.id})}">Sửa</a> |
 
-            <!-- Sửa -->
-            <a th:href="@{/student/edit/{id}(id=${student.id})}">Sửa</a>
+            <a th:href="@{/student/{id}(id=${student.id})}">Xem</a>
         </td>
     </tr>
 </table>

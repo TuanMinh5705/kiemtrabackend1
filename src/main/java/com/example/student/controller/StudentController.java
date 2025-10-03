@@ -38,7 +38,7 @@ public class StudentController {
     public String viewStudent(@PathVariable Long id, Model model) {
         Student student = iStudentService.findById(id);
         model.addAttribute("student", student);
-        return "view";
+        return "detail";
     }
 
     @GetMapping("/edit/{id}")
